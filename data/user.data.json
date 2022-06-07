@@ -1,0 +1,135 @@
+[
+    {
+        "nom": "papa",
+        "prenom": "diouf",
+        "telephone": "123",
+        "email": "papa@gmail.com",
+        "password": "123",
+        "id": "628fad59bf51e",
+        "role": "ROLE_ADMIN"
+    },
+    {
+        "nom": "coach",
+        "prenom": "ndoye",
+        "telephone": "12345",
+        "email": "coach@gmail.com",
+        "password": "coach",
+        "id": "628fd4599614d"
+    },
+    {
+        "nom": "comore",
+        "prenom": "hamissi",
+        "telephone": "123",
+        "email": "hamissi",
+        "password": "123",
+        "id": "62989d758b9ac",
+        "role": "ROLE_JOUEUR"
+    },
+    {
+        "nom": "ta",
+        "prenom": "test",
+        "telephone": "123",
+        "email": "test@gmail.com",
+        "password": "123",
+        "id": "6298f8f5b9bf1",
+        "role": null
+    },
+    {
+        "nom": "ta",
+        "prenom": "tester",
+        "telephone": "123",
+        "email": "tester@gmail.com",
+        "password": "123",
+        "id": "6298f9be95f9e",
+        "role": null
+    },
+    {
+        "nom": "kebe",
+        "prenom": "Mbene",
+        "telephone": "123",
+        "email": "mbene@gmail.com",
+        "password": "1234",
+        "id": "6299c8398d755",
+        "role": "ROLE_JOUEUR"
+    },
+    {
+        "nom": "laye",
+        "prenom": "libasse",
+        "telephone": "123",
+        "email": "libasse@gmail.com",
+        "password": "gggg",
+        "id": "629a1fdbb3c09",
+        "role": "ROLE_JOUEUR",
+        "avatar": "imaage.jpeg"
+    },
+    {
+        "nom": "diarra",
+        "prenom": "laye",
+        "telephone": "1234",
+        "email": "laye@gmail.com",
+        "password": "aaaa",
+        "id": "629a20768e919",
+        "role": "ROLE_JOUEUR",
+        "avatar": "Sans_titre__3_-removebg-preview.png"
+    },
+    {
+        "nom": "BARRO",
+        "prenom": "Mouhamadou",
+        "telephone": "77212121212",
+        "email": "BARRO@gmail.com",
+        "password": "12345",
+        "id": "629a5598331c1",
+        "role": "ROLE_JOUEUR",
+        "avatar": "maquette connexion inscription"
+    },
+    {
+        "nom": "Barro",
+        "prenom": "Mamadou",
+        "email": "barro@gmail.com",
+        "password": "1234",
+        "id": "629b31ad1f531",
+        "role": "ROLE_ADMIN",
+        "avatar": "images.jpeg"
+    },
+    {
+        "question": null,
+        "typeQuestion": null,
+        "Reponse": null,
+        "numero": null,
+        "id": "629b7681dae35"
+    },
+    {
+        "question": null,
+        "typeQuestion": null,
+        "Reponse": null,
+        "numero": null,
+        "id": "629b77e911bfd"
+    },
+    {
+        "controller": "AdminController",
+        "action": "CREER",
+        "question": "jbjbkb",
+        "numero": "2",
+        "typeQuestion": "",
+        "Reponse": "gygugug"
+    },
+    {
+        "nom": "Ibrahim",
+        "prenom": "cheikh",
+        "email": "Thiam@gmail.com",
+        "password": "1234",
+        "id": "629b89aec4439",
+        "role": "ROLE_ADMIN",
+        "avatar": "WhatsApp Image 2022-05-13 at 14.56.41.jpeg"
+    },
+    {
+        "nom": "Diene",
+        "prenom": "Aliou",
+        "telephone": "1234",
+        "email": "aliou@gmail.com",
+        "password": "123",
+        "id": "629f1629a3ce7",
+        "role": "ROLE_JOUEUR",
+        "avatar": ""
+    }
+]

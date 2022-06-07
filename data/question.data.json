@@ -1,0 +1,27 @@
+[
+    {
+        "controller": "AdminController",
+        "action": "CREER",
+        "question": "bbbb",
+        "numero": "1",
+        "typeQuestion": "Unique",
+        "Reponse": "jjjjjjjjjjj",
+        "id": "629f25b91e8f8"
+    },
+    {
+        "controller": "AdminController",
+        "action": "CREER",
+        "question": "hnhhhh",
+        "numero": "2",
+        "typeQuestion": "Unique",
+        "Reponse": "hbhhh",
+        "id": "629f25cc20c02"
+    },
+    {
+        "question": "JBHVBJKN;,",
+        "numero": "3",
+        "typeQuestion": "Simple",
+        "Reponse": "DFVGYBHUGYTFRZQ",
+        "id": "629f261b8aa5c"
+    }
+]

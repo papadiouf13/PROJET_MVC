@@ -1,0 +1,19 @@
+.TABLEAU {
+    /* border: 2px solid red; */
+    margin-left: 5%;
+}
+thead tr {
+    background-color: midnightblue;
+    color: #fff;
+    text-align: left;
+}
+th, td {
+    padding: 7px 5px;
+    text-align: center;
+}
+tbody tr, td, th {
+    border: 1px solid #ddd;
+}
+tbody tr:nth-child(even){
+    background-color: #f3f3f3;
+}

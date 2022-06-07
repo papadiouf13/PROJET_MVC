@@ -1,0 +1,1 @@
+<?php require_once(ROUTE_DIR.'vue/inc/menu.html.php'); ?>
