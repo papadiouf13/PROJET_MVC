@@ -19,8 +19,9 @@ if (isset($_SESSION['arrayError'])) {
 <?php require_once(ROUTE_DIR.'vue/inc/menu.html.php'); ?>
     <div class="EntourageAdmin">
         <div class="photodelecrivain"><img src="images/Albert.jpeg" alt="" class="photodelecrivain"></div>
+       
         <div class="citation">
-            <center><h1 class="citations">“Le monde que nous avons créé est le résultat de notre niveau de réflexion,
+            <center class="POETE"> <h2>ALBERT EINSTEIN</h2><h1>“Le monde que nous avons créé est le résultat de notre niveau de réflexion,
                  mais les problèmes qu'il engendre ne sauraient être résolus à ce même niveau.”</h1></center>
         </div>
     </div>

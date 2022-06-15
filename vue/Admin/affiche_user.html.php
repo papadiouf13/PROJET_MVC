@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/styleTableau.css">
+    <link rel="stylesheet" href="css/styleTableauJoueur.css">
 </head>
 
 <body>
@@ -26,10 +26,7 @@
             <tr>
                 <th>Nom</th>
                 <th>Prenom</th>
-                <th>Téléphone</th>
-                <th>Email</th>
-                <th>Action</th>
-                <th>Image</th>
+                <th>Score</th>
             </tr>
             </thead>
                 <?php foreach ($users as $key => $val):?>
@@ -38,12 +35,6 @@
                         <td><?php echo $val['nom'];?></td>
                         <td><?php echo $val['prenom'];?></td>
                         <td><?php echo $val['telephone'];?></td>
-                        <td><?php echo $val['email'];?></td>
-                        <td>
-                            <a href="<?= WEB_ROUTE.'/?controller=securityController&view=delete&id='.$val['id']?>">effacer</a>
-                            <a href="<?= WEB_ROUTE.'/?controller=userController&view=edit&id='.$val['id']?>">Modifier</a>
-                        </td>
-                        <td><?php echo $val['avatar'];?></td>
                     </tr>
                     <?php endif;?>
                 <?php endforeach;?>

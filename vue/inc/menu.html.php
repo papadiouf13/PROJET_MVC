@@ -1,11 +1,4 @@
-<?php 
-$arrayError = [];
 
-if (isset($_SESSION['arrayError'])) {
-    $arrayError = $_SESSION['arrayError'];
-    unset($_SESSION['arrayError']);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,12 +19,14 @@ if (isset($_SESSION['arrayError'])) {
        <div class="profil">
            <div class="entete">
                <div class="photoAdmin">
-                   <img src="images/imaage.jpeg" alt="" class="photoAdmin">
+                   <img src="images/uploads/<?php echo $_SESSION['userConnected']['avatar']?>" alt="Pas de photo profil" class="photoAdmin">
                </div>
                <div class="infoAdmin">
-                   Prenom: <!-- <?php echo $_SESSION['nom']=$nom?> --> <br>
-                   Nom:Diouf <br>
-                   Date: <?php echo date_format(date_create(), "d-m-Y"); ?>
+                   <div class="Nomprenom">
+                   <label for="">Prenom:</label> <?php echo $_SESSION['userConnected']['prenom']?> <br>
+                   <label for="">Nom:</label> <?php echo $_SESSION['userConnected']['nom']?><br>
+                   </div>
+                  <label for=""> Date:</label> <?php echo date_format(date_create(), "d-m-Y"); ?>
                </div>
            </div>
            <div class="modificationAdmin">

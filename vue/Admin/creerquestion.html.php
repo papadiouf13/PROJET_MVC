@@ -1,23 +1,45 @@
+<?php 
+$arrayError = array();
+
+if (isset($_SESSION['arrayError'])) {
+    $arrayError = $_SESSION['arrayError'];
+    unset($_SESSION['arrayError']);
+}
+?>
 <?php require_once(ROUTE_DIR . 'vue/inc/menu.html.php'); ?>
 <form action="<?=WEB_ROUTE?>" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="controller" value="AdminController">
     <input type="hidden" name="action" value="CREER">
+    <input type="hidden" name="id" value="">
+
     <div class="cadree">
         <div class="saisirdesquestions">
-            Question: <textarea name="question" id="" cols="30" rows="10"></textarea>
-            <!-- <span><?php echo isset($arrayError['question']) ? $arrayError['question'] : '' ?></span> -->
+            <label for="">Question: </label><br>
+            <textarea name="question" id="" cols="30" rows="10"></textarea><br>
+            <span id="erreur"><?php echo isset($arrayError['question']) ? $arrayError['question'] : '' ?></span>
         </div><br>
-        Nombre de point: <input type="number" name="numero" class="TAILLE"><br><br>
-        Type de réponses:
-        <select name="typeQuestion" id="" class="TAILLE1">
-            <option  value="">Donnez le type de réponse</option>
-            <option value="Simple" >Réponse simple</option>
-            <option value="Unique">Réponse unique</option>
-            <option value="Multiple">Réponse à choix multiple</option>
-        </select><br><br>
-        Réponse <input type="text" name="Reponse" class="TAILLE2"><br>
+        <label for=""> Nombre de point:</label><br>
+        <input type="number" name="numero" class="TAILLE"><br>
+        <span id="erreur"><?php echo isset($arrayError['numero']) ? $arrayError['numero'] : '' ?></span><br>
+        <label for="">Type de réponses:</label><br>
+        <select name="typeQuestion" id="typeQuestion" class="TAILLE1">
+            <option value="">Donnez le type de réponse</option>
+            <option value="simple" >Réponse simple</option>
+            <option value="unique">Réponse unique</option>
+            <option value="multiple">Réponse à choix multiple</option>
+        </select> 
+        <span id="plus">
+            <i class="fa-solid fa-plus breukh"></i><br><br>
+        <span id="erreur"><?php echo isset($arrayError['typeQuestion']) ? $arrayError['typeQuestion'] : '' ?></span>
+
+        </span> 
+        <label id="error"></label>
+        <div id="rep">
+               
+        </div>
+        <button type="submit" class="butonQuestion">Enregistrer</button>
     </div>
-    <button type="submit" class="butonQuestion">Enregistrer</button>
+    
 </form>
 
 <style>
@@ -44,13 +66,13 @@
     .cadree {
         border: 2px solid;
         width: 40em;
-        height: 300px;
         margin-left: 10%;
+        padding: 10px;
     }
     .TAILLE2{
         border: 2px solid #3792E5;
         width: 60%;
-        height: 30px;
+        height: 20px;
         border-radius: 10px 5px;
     }
     textarea{
@@ -61,9 +83,101 @@
         border-radius: 5px 5px;
     }
     .butonQuestion{
-        margin-left: 97.5%;
+        margin-left: 42%;
         background: #3792E5;
         color: white;
         border: none;
     }
+    .breukhnieule{
+        padding: 7px;
+    }
+    .breukh{
+    cursor: pointer;
+    background-color: #3792E5;
+    color: white;
+    padding: 3px;
+    border-radius:2px;
+    }
+    #repSimple, #repUnique , #repMultiple{
+    display: none;
+    }
+    .fa-trash{
+    color: red;
+    cursor: pointer;
+    }
+    .show{
+    display: block !important;
+    }
+    #erreur{
+        color: red;
+        font-size: 10px;
+    }
 </style>
+<script>
+    const rep = document.getElementById("rep")
+    const typeQuestion = document.getElementById("typeQuestion")
+    const plus = document.getElementById("plus")
+    const error = document.getElementById('error')
+    nbr = 0
+    plus.addEventListener("click",()=>{
+
+        nbr++
+       let div = document.createElement("div")
+       div.classList.add('breukhnieule')
+
+       typeQuestion.addEventListener("change" , ()=>{
+        nbr = 0
+        rep.removeChild(div)
+       })
+
+       if(typeQuestion.value == "simple") {
+
+        error.innerHTML = ""
+        if(nbr < 2){
+
+            div.innerHTML = 
+        `
+                <label for="">Réponse ${nbr}</label>
+                <input type="text" name="reponse[]" class="TAILLE2">
+                <i class="fa fa-trash" ></i>
+       ` 
+        }else{
+        
+        div.classList.remove('breukhnieule')
+
+        }
+
+       }else if(typeQuestion.value == "unique"){
+
+        error.innerHTML = ""
+        div.innerHTML = 
+       `
+            <label for="">Réponse ${nbr}</label>
+            <input type="text" name="reponse[]" class="TAILLE2">
+            <input type="radio" name="bonneReponse[]" value="${nbr}">
+            <i class="fa fa-trash" id="delete"></i>
+       `
+       }else if (typeQuestion.value == "multiple") {
+
+        error.innerHTML = ""
+        div.innerHTML = 
+       `
+            <label for="">Réponse ${nbr}</label>
+            <input type="text" name="reponse[]" class="TAILLE2">
+            <input type="checkbox" name="bonneReponse[]" value="${nbr}">
+            <i class="fa fa-trash"></i>
+       `
+       }else if (typeQuestion.value == "") {
+        nbr = 0
+        error.innerHTML = "check please!"
+       }
+       
+       if (typeQuestion.value != "") {
+           rep.appendChild(div)
+       }
+
+      
+    })
+   
+    
+</script>

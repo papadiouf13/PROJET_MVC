@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
 body{
     display: flex;
     flex-wrap: wrap;
@@ -73,8 +76,13 @@ body{
 }
 .infoAdmin{
     width: 50%;
-    border: 2px solid;
     margin-left:5%;
+    font-family: "Courier New", Courier, monospace;
+}
+.Nomprenom{
+    font-family: "Courier New", Courier, monospace;
+    margin-left:5%;
+    color: aliceblue;
 }
 .InpIns{
     margin-top: 2%;
@@ -138,11 +146,10 @@ body{
     box-shadow: 5px 5px 3px #3792E5;
     
 }
-/* .BUTON{
-    background-color:;
-    text-decoration: ;
-} */
-/* .fa-solid{
-    margin-left: 5%;
+
+.POETE{
+    color: goldenrod;
 }
- */
+.POETE h2{
+    color: #3792E5;
+}

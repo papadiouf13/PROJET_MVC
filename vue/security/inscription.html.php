@@ -21,7 +21,8 @@ if (isset($_SESSION['arrayError'])) {
     </div>
     <form method="POST" action="<?=WEB_ROUTE?>" enctype="multipart/form-data">
     <input type="hidden" name="controller" value="securityController">
-    <input type="hidden" name="action" value="inscription">
+    <input type="hidden" name="action" value="<?=isset($user['id']) ? 'edit' : 'inscription' ?>">
+    <input type="hidden" name="id" value="<?=isset($user['id']) ? $user['id'] : '' ?>">
         <div class="logo">
             <img src="images/logo.png" alt="">
         </div>
@@ -29,24 +30,24 @@ if (isset($_SESSION['arrayError'])) {
         <div class="cadre">
            <div class="cadre1">
                <label for="">Prénom</label><br>
-               <input type="text" name="prenom" value="<?=isset($user['prenom']) ? $user['prenom'] : '' ?>">
+               <input type="text" name="prenom" placeholder="Veuillez saisir votre prénom" value="<?=isset($user['prenom']) ? $user['prenom'] : '' ?>">
                <span><?php echo isset($arrayError['prenom']) ? $arrayError['prenom'] : '' ?></span>
            </div>
            <div class="cadre1">
                <label for="">Nom</label><br>
-               <input type="text" name="nom">
+               <input type="text" name="nom" placeholder="Veuillez saisir votre nom" value="<?=isset($user['nom']) ? $user['nom'] : '' ?>">
                <span><?php echo isset($arrayError['nom']) ? $arrayError['nom'] : '' ?></span>
            </div>
         </div>
         <div class="cadre">
            <div class="cadre1">
                <label for="">Téléphone</label><br>
-               <input type="text" name="telephone">
+               <input type="text" name="telephone" placeholder="Veuillez saisir votre numero de téléphone" value="<?=isset($user['telephone']) ? $user['telephone'] : '' ?>">
                <span><?php echo isset($arrayError['telephone']) ? $arrayError['telephone'] : '' ?></span>
            </div>
            <div class="cadre1">
                <label for="nom">Email</label><br>
-               <input type="text" name="email">
+               <input type="text" name="email" placeholder="Veuillez saisir votre email" value="<?=isset($user['email']) ? $user['email'] : '' ?>">
                <span><?php echo isset($arrayError['email']) ? $arrayError['email'] : '' ?></span>
            </div>
         </div>

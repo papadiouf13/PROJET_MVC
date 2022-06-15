@@ -57,7 +57,7 @@ function valid_input(array &$arrayError, $str, string $key){
     }
 }
 
-function valid_point($valeur,string $key,array &$arrayError){
+function valid_point(array &$arrayError,$valeur,string $key){
     if (empty($valeur)) {
         $arrayError[$key] = "Ce champ est obligatoire ";
     }elseif ($valeur<=0) {

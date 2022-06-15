@@ -38,7 +38,7 @@
                         <td><?php echo $val['email'];?></td>
                         <td>
                             <a href="<?= WEB_ROUTE.'/?controller=securityController&view=supprimer&id='.$val['id']?>">Supprimer</a>
-                            <a href="<?= WEB_ROUTE.'/?controller=userController&view=edit&id='.$val['id']?>">Modifier</a>
+                            <a href="<?= WEB_ROUTE.'/?controller=securityController&view=edit&id='.$val['id']?>">Modifier</a>
                         </td>
                         <td><?php echo $val['avatar'];?></td>
                     </tr>

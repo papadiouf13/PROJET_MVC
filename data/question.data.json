@@ -1,27 +1,32 @@
 [
     {
-        "controller": "AdminController",
-        "action": "CREER",
-        "question": "bbbb",
-        "numero": "1",
-        "typeQuestion": "Unique",
-        "Reponse": "jjjjjjjjjjj",
-        "id": "629f25b91e8f8"
+        "question": "Mamadou",
+        "typeQuestion": "unique",
+        "Reponse": [
+            "Diop",
+            "Fall",
+            "Diouf"
+        ],
+        "bonneReponse": [
+            "3"
+        ],
+        "numero": "5",
+        "id": "62aa27da10c62"
     },
     {
-        "controller": "AdminController",
-        "action": "CREER",
-        "question": "hnhhhh",
-        "numero": "2",
-        "typeQuestion": "Unique",
-        "Reponse": "hbhhh",
-        "id": "629f25cc20c02"
-    },
-    {
-        "question": "JBHVBJKN;,",
-        "numero": "3",
-        "typeQuestion": "Simple",
-        "Reponse": "DFVGYBHUGYTFRZQ",
-        "id": "629f261b8aa5c"
+        "question": "Les langages du web",
+        "typeQuestion": "multiple",
+        "Reponse": [
+            "Java",
+            "photoshop",
+            "html\/css",
+            "adobe Premiere"
+        ],
+        "bonneReponse": [
+            "1",
+            "3"
+        ],
+        "numero": "5",
+        "id": "62aa2f9b91ae8"
     }
 ]
