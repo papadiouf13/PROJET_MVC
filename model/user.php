@@ -68,6 +68,16 @@ function delete(string $id):bool{
     return $yes;
      
 }
+function utilisateur(string $role){
+    $data = get_list_user();
+    $tableau=[];
+    foreach ($data as $value) {
+        if ($value['role'] == $role) {
+            $tableau [] = $value;
+        }
+    }
+    return $tableau;
+}
 function deleteQuestion(string $id):bool{
     $data = get_file_contentQuestion();
     $tab=[];

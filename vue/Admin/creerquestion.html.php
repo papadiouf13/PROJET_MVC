@@ -10,16 +10,16 @@ if (isset($_SESSION['arrayError'])) {
 <form action="<?=WEB_ROUTE?>" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="controller" value="AdminController">
     <input type="hidden" name="action" value="CREER">
-    <input type="hidden" name="id" value="">
+    <input type="hidden" name="id" value="<?=isset($Question['id']) ? $Question['id'] : '' ?>">
 
     <div class="cadree">
         <div class="saisirdesquestions">
             <label for="">Question: </label><br>
-            <textarea name="question" id="" cols="30" rows="10"></textarea><br>
+            <textarea name="question" id="" cols="30" rows="10"><?= isset($Question['question']) ? $Question['question'] : '' ?></textarea><br>
             <span id="erreur"><?php echo isset($arrayError['question']) ? $arrayError['question'] : '' ?></span>
         </div><br>
         <label for=""> Nombre de point:</label><br>
-        <input type="number" name="numero" class="TAILLE"><br>
+        <input type="number" name="numero" value="<?= isset($Question['numero']) ? $Question['numero'] : '' ?>" class="TAILLE"><br>
         <span id="erreur"><?php echo isset($arrayError['numero']) ? $arrayError['numero'] : '' ?></span><br>
         <label for="">Type de réponses:</label><br>
         <select name="typeQuestion" id="typeQuestion" class="TAILLE1">
@@ -35,7 +35,22 @@ if (isset($_SESSION['arrayError'])) {
         </span> 
         <label id="error"></label>
         <div id="rep">
-               
+        <?php foreach ($Question['Reponse'] as $key => $value) :?>
+        <?php if($Question["typeQuestion"] == "unique"): ?>
+           <input type="text" name="reponse[]" value="<?= $value ?>" >
+           <input type="radio" name="bonneReponse[]" value="<?= $value ?>">
+           <i class="fa fa-trash" id="delete"></i>
+       <?php endif?>
+       <?php if($Question["typeQuestion"] == "simple"): ?>
+           <input type="text" name="reponse[]" value="<?= $value ?>" >
+           <i class="fa fa-trash" id="delete"></i>
+       <?php endif?>
+       <?php if($Question["typeQuestion"] == "multiple"): ?>
+           <input type="text" name="reponse[]" value="<?= $value ?>" >
+           <input type="checkbox" name="bonneReponse[]" value="<?= $value ?>">
+           <i class="fa fa-trash" id="delete"></i><br>
+       <?php endif?>
+      <?php endforeach?>     
         </div>
         <button type="submit" class="butonQuestion">Enregistrer</button>
     </div>

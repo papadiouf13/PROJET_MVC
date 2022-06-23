@@ -36,6 +36,7 @@
                <a href="<?php echo WEB_ROUTE.'?controller=AdminController&view=list.user'?>" class="lienModAmin"> <i class="fa-solid fa-list"></i>  </a><a href="<?php echo WEB_ROUTE.'?controller=AdminController&view=list.user'?>" class="lienModAmin">  Liste Joueurs   </a><br><br><br>
                <a href="<?php echo WEB_ROUTE.'?controller=AdminController&view=creerquestion'?>" class="lienModAmin">  <i class="fa-solid fa-plus"></i></a><a href="<?php echo WEB_ROUTE.'?controller=AdminController&view=creerquestion'?>" class="lienModAmin">  Créer Questions  </a><br><br><br>
                <a href="<?php echo WEB_ROUTE.'?controller=AdminController&view=list.Admin'?>" class="lienModAmin"> <i class="fa-solid fa-list"></i> </a><a href="<?php echo WEB_ROUTE.'?controller=AdminController&view=list.Admin'?>" class="lienModAmin">  Liste Admin  </a><br><br>
+               <a href="<?php echo WEB_ROUTE.'?controller=AdminController&view=tableaubord'?>" class="lienModAmin"> <i class="fa-solid fa-list"></i> </a><a href="<?php echo WEB_ROUTE.'?controller=AdminController&view=tableaubord'?>" class="lienModAmin"> Tableau de Bord </a><br><br>
            </div>
        </div>
 </body>

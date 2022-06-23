@@ -38,7 +38,7 @@
                         <td><?php echo $val['email'];?></td>
                         <td>
                             <a href="<?= WEB_ROUTE.'/?controller=securityController&view=supprimer&id='.$val['id']?>">Supprimer</a>
-                            <a href="<?= WEB_ROUTE.'/?controller=securityController&view=edit&id='.$val['id']?>">Modifier</a>
+                            <a href="<?= WEB_ROUTE.'/?controller=AdminController&view=editAdmin&id='.$val['id']?>">Modifier</a>
                         </td>
                         <td><?php echo $val['avatar'];?></td>
                     </tr>
@@ -46,6 +46,13 @@
                 <?php endforeach;?>
             </table>
     <?php endif;?>
+   <div class="">
+   <?php for($i = 1; $i <= $totalPage; $i++):?>
+        <a href="<?= WEB_ROUTE.'/?controller=AdminController&view=list.Admin&page='.$i.''?>">
+        <button class="liensstyle"><?php echo $i; ?></button>
+    </a>
+        <?php endfor;?>
+   </div>
     </div>
    </div>
     </div>
@@ -53,3 +60,15 @@
 
 </html>
 
+<style>
+    .liensstyle{
+        background-color: #3792E5;
+        margin-top: 5%;
+        margin: 1%;
+        border: none;
+        color: whitesmoke;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>

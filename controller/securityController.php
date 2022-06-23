@@ -21,12 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
                 delete($_GET['id']);
                 header("location:".WEB_ROUTE."?controller=AdminController&view=list.Admin");
             }
-        }elseif ($_GET['view'] == "inscription" || $_GET['view'] == "edit") {
-            if(isset($_GET["id"])){
-                
-                $_SESSION['user']= get_user_by_id($_GET["id"]);
-            }
-            require_once(ROUTE_DIR.'vue/Admin/creeradmin.html.php');
         }
     }
 } elseif ($_SERVER['REQUEST_METHOD'] == "POST") {

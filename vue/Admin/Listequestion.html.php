@@ -29,17 +29,17 @@
                 <a href="<?= WEB_ROUTE . '/?controller=AdminController&view=edit&id=' . $val['id'] ?>">Modifier</a>
             </td>
         <?php endforeach; ?>
-        <!-- <h3>D’où vient le Corona ?</h3>
-    <input type="radio">Chine <br>
-    <input type="radio">Italie <br>
-    <h3>Quel terme définit langage qui s’adapte sur Androïd et sur Ios?</h3>
-    <input type="text">
-    <h3>Quelle est la première école de codage gratuite au Sénégal? </h3>
-    <input type="radio">Chine <br>
-    <input type="radio">Italie -->
     </div>
+    <?php for($i = 1; $i <= $totalPage; $i++):?>
+        <a href="<?= WEB_ROUTE.'/?controller=AdminController&view=listequestion&page='.$i.''?>">
+        <button class="liensstyle"><?php echo $i; ?></button>
+    </a>
+        <?php endfor;?>
 </div>
 <style>
+    .ColorLiens{
+        color: white;
+    }
     .cadrnbrQuestion {
 
 
@@ -66,5 +66,14 @@
     .nbrQuestion {
         width: 70%;
         margin-left: 2%;
+    }
+    .liensstyle{
+        background-color: #3792E5;
+        margin-top: 5%;
+        margin: 1%;
+    }
+    a{
+        text-decoration: none;
+        
     }
 </style>

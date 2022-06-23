@@ -4,28 +4,47 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
     if (isset($_GET['view'])) {
         if ($_GET['view'] == "accueil") {
             require_once(ROUTE_DIR . 'vue/Admin/Admin.html.php');
+        } elseif ($_GET['view'] == "tableaubord") {
+            require_once(ROUTE_DIR . 'vue/Admin/tableaubord.html.php');
         } elseif ($_GET['view'] == "listequestion") {
+            $page = 1;
+            if (isset($_GET["page"])) {
+                $page = intval($_GET["page"]);
+            }
             $Questions = get_list_question();
+
+            $totalPage = countpage(5, $Questions);
+            $Questions = getListToDisplay($Questions, $page, 5);
+
             require_once(ROUTE_DIR . 'vue/Admin/Listequestion.html.php');
         } elseif ($_GET['view'] == "creerquestion") {
             require_once(ROUTE_DIR . 'vue/Admin/creerquestion.html.php');
         } elseif ($_GET['view'] == "list.user") {
-            /* $totalPage = countpage(5, $users);
-            $users = getListToDisplay($users, 1, 5); */
-            $users = get_list_user();
+            $page = 1;
+            if (isset($_GET["page"])) {
+                $page = intval($_GET["page"]);
+            }
+            $users = utilisateur("ROLE_JOUEUR");
+
+            $totalPage = countpage(5, $users);
+            $users = getListToDisplay($users, $page, 5);
             require_once(ROUTE_DIR . 'vue/Admin/affiche_user.html.php');
         } elseif ($_GET['view'] == "list.Admin") {
-            /* $totalPage=countpage(5, $users);
-          $users= getListToDisplay($users, 1 , 4); */
-            $users = get_list_user();
-            /* $user=get_user_by_id($_GET['id']); */
+            $page = 1;
+            if (isset($_GET["page"])) {
+                $page = intval($_GET["page"]);
+            }
+            $users = utilisateur("ROLE_ADMIN");
+
+            $totalPage = countpage(5, $users);
+            $users = getListToDisplay($users, $page, 5);
             require_once(ROUTE_DIR . 'vue/Admin/ListeAdmin.html.php');
         } elseif ($_GET['view'] == "inscriptionAdmin") {
             require_once(ROUTE_DIR . 'vue/Admin/creeradmin.html.php');
-        }elseif ($_GET['view'] == "deletequest") {
-            if(isset($_GET['id'])){
+        } elseif ($_GET['view'] == "deletequest") {
+            if (isset($_GET['id'])) {
                 deleteQuestion($_GET['id']);
-                header("location:".WEB_ROUTE."?controller=AdminController&view=listequestion");
+                header("location:" . WEB_ROUTE . "?controller=AdminController&view=listequestion");
             }
         }/* elseif ($_GET['view'] == "creerquestion" || $_GET['view'] == "edit") {
             if(isset($_GET["id"])){
@@ -33,22 +52,30 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
                 $_SESSION['user']= get_user_by_id($_GET["id"]);
             }
             require_once(ROUTE_DIR.'vue/Admin/creerquestion.html.php');
-        } */elseif($_GET['view'] == 'edit'){
-            $_SESSION['id']=$_GET['id'];
-            $id = $_SESSION['id'];
-            $question = modif_question_id($id);
-            require(ROUTE_DIR.'vue/Admin/creerquestion.html.php');
+        } */ elseif ($_GET['view'] == 'edit') {
+            $Question = get_question_by_id($_GET["id"]);
+            require(ROUTE_DIR . 'vue/Admin/creerquestion.html.php');
+        } elseif ($_GET['view'] == "inscription" || $_GET['view'] == "editAdmin") {
+
+
+            if (isset($_GET["id"])) {
+                $user = get_user_by_id($_GET["id"]);
+            }
+            require_once(ROUTE_DIR . 'vue/Admin/creeradmin.html.php');
         }
     }
 } elseif ($_SERVER['REQUEST_METHOD'] == "POST") {
     if (isset($_POST['action'])) {
-        if ($_POST['action'] == "inscription") {
+        if ($_POST['action'] == "inscriptionAdmin") {
             /* var_dump($_POST);die; */
             inscriptionAdmin($_POST, $_FILES);
         } elseif ($_POST['action'] == "CREER") {
             unset($_POST["controller"]);
             unset($_POST["action"]);
             Questionnaire($_POST);
+        } else  if ($_POST['action'] == "editAdmin") {
+            /* var_dump($_POST);die; */
+            inscriptionAdmin($_POST, $_FILES);
         }
     }
 }
@@ -72,29 +99,37 @@ function Questionnaire($questionnaire): void
 
 
     valid_input($arrayError, $question, 'question');
-   type_reponse($typeQuestion, 'typeQuestion',$arrayError );
-    reponse($reponse, 'Reponse',$arrayError );
-    valid_point($arrayError , $numero, 'numero' );
+    type_reponse($typeQuestion, 'typeQuestion', $arrayError);
+    reponse($reponse, 'Reponse', $arrayError);
+    valid_point($arrayError, $numero, 'numero');
 
     if (empty($arrayError)) {
         if ($result != null) {
             $_SESSION['questionAJOUTER'] = $result;
         }
 
-        if ($data['id'] != "") {
+        if ($questionnaire['id'] != "") {
+            $newquestion = [
+                "question" => $question,
+                "typeQuestion" => $typeQuestion,
+                "Reponse" =>
+                $reponse,
+                "bonneReponse" =>
+                $bonneReponse,
+                "numero" => $numero,
+                "id" => $id
 
-            modificationQuestion($data);
+            ];
+            modificationQuestion($newquestion);
         } else {
 
             $newquestion = [
                 "question" => $question,
                 "typeQuestion" => $typeQuestion,
-                "Reponse" => 
-                    $reponse
-                ,
-                "bonneReponse" => 
-                    $bonneReponse
-                ,
+                "Reponse" =>
+                $reponse,
+                "bonneReponse" =>
+                $bonneReponse,
                 "numero" => $numero,
                 "id" => uniqid()
 
@@ -105,7 +140,7 @@ function Questionnaire($questionnaire): void
         $_SESSION['questionAJOUTER'] = $Question;
         header("location:" . WEB_ROUTE . "?controller=AdminController&view=listequestion");
     } else {
-        $_SESSION['arrayError']=$arrayError;
+        $_SESSION['arrayError'] = $arrayError;
         header("location:" . WEB_ROUTE . "?controller=AdminController&view=creerquestion");
     }
 }
@@ -117,7 +152,6 @@ function Questionnaire($questionnaire): void
 
 function inscriptionAdmin($inscription, $files)
 {
-
     $arrayError = [];
     extract($inscription);
 
@@ -132,12 +166,21 @@ function inscriptionAdmin($inscription, $files)
     }
     if (empty($arrayError)) {
 
-        if (to_uploads($files)) {
-            $data['fileToUpload'] = $files['fileToUpload']['name'];
-        }
-        if ($data['id'] != "") {
 
-            modification($data);
+        if (to_uploads($files)) {
+            $inscription['fileToUpload'] = $files['fileToUpload']['name'];
+        }
+        if ($inscription['id'] != "") {
+            $user = [
+                "nom" => $nom,
+                "prenom" => $prenom,
+                "email" => $email,
+                "password" => $password,
+                "id" => $id,
+                "role" => 'ROLE_ADMIN',
+                "avatar" =>  $files['fileToUpload']['name']
+            ];
+            modification($user);
         } else {
 
             $user = [
@@ -149,8 +192,9 @@ function inscriptionAdmin($inscription, $files)
                 "role" => 'ROLE_ADMIN',
                 "avatar" =>  $files['fileToUpload']['name']
             ];
+            addUser($user);
         }
-        addUser($user);
+
         /* $_SESSION['userconnec'] = $user; */
         header("location:" . WEB_ROUTE . "?controller=AdminController&view=list.Admin");
     } else {
