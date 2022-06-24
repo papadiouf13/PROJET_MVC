@@ -1,6 +1,7 @@
 .TABLEAU {
     /* border: 2px solid red; */
-    margin-left: 55%;
+    margin-left: 30%;
+    margin-top: 6%;
 }
 thead tr {
     background-color: #3792E5;
@@ -13,7 +14,14 @@ th, td {
 }
 tbody tr, td, th {
     border: 1px solid #ddd;
+    background-color: #3792E5;
 }
 tbody tr:nth-child(even){
     background-color: #f3f3f3;
+}
+.global{
+    border: 2px solid;
+    width: 75%;
+    margin-left: 2%;
+    background-image: url(../images/Quizz.jpg);
 }

@@ -84,66 +84,59 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
 
 
-function Questionnaire($questionnaire): void
-{
-    $arrayError = array();
+function Questionnaire($questionnaire):void{
+    $arrayError=array();
     extract($questionnaire);
-    $newquestion = [];
-    /* var_dump($questionnaire);
-    die; */
-    $questionnaire['id'] = uniqid();
-    /* AddQuestion($questionnaire); */
-    /* var_dump($questionnaire); die; */
-    /* header("location:" . WEB_ROUTE . "?controller=AdminController&view=listequestion"); */
-
-
-
+    $newquestion= [];
+ 
     valid_input($arrayError, $question, 'question');
-    type_reponse($typeQuestion, 'typeQuestion', $arrayError);
-    reponse($reponse, 'Reponse', $arrayError);
-    valid_point($arrayError, $numero, 'numero');
-
-    if (empty($arrayError)) {
-        if ($result != null) {
-            $_SESSION['questionAJOUTER'] = $result;
-        }
-
+    type_reponse($typeQuestion,'typeQuestion',$arrayError,);
+    reponse($reponse,'Reponse', $arrayError);
+    valid_point($arrayError, $numero,'numero');
+     if (count($arrayError) == 0) {
+ 
         if ($questionnaire['id'] != "") {
             $newquestion = [
                 "question" => $question,
                 "typeQuestion" => $typeQuestion,
                 "Reponse" =>
-                $reponse,
+                    $reponse
+                ,
                 "bonneReponse" =>
-                $bonneReponse,
+                    $bonneReponse
+                ,
                 "numero" => $numero,
                 "id" => $id
-
             ];
             modificationQuestion($newquestion);
         } else {
-
             $newquestion = [
                 "question" => $question,
                 "typeQuestion" => $typeQuestion,
                 "Reponse" =>
-                $reponse,
+                    $reponse
+                ,
                 "bonneReponse" =>
-                $bonneReponse,
+                    $bonneReponse
+                ,
                 "numero" => $numero,
                 "id" => uniqid()
-
             ];
+          
             AddQuestion($newquestion);
         }
-
-        $_SESSION['questionAJOUTER'] = $Question;
+      
+       
+      
+        $_SESSION['questionAJOUTER']=$Question;
         header("location:" . WEB_ROUTE . "?controller=AdminController&view=listequestion");
     } else {
         $_SESSION['arrayError'] = $arrayError;
         header("location:" . WEB_ROUTE . "?controller=AdminController&view=creerquestion");
     }
-}
+ }
+ 
+ 
 
 
 

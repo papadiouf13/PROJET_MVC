@@ -42,7 +42,7 @@ if (isset($_SESSION['arrayError'])) {
            <i class="fa fa-trash" id="delete"></i>
        <?php endif?>
        <?php if($Question["typeQuestion"] == "simple"): ?>
-           <input type="text" name="reponse[]" value="<?= $value ?>" >
+           <input type="text" name="bonneReponse[]" value="<?= $value ?>" >
            <i class="fa fa-trash" id="delete"></i>
        <?php endif?>
        <?php if($Question["typeQuestion"] == "multiple"): ?>
@@ -64,6 +64,7 @@ if (isset($_SESSION['arrayError'])) {
         height: 50px;
         margin-top:5%;
         border-radius: 10px 5px;
+        
     }
 
     .TAILLE {
@@ -83,6 +84,8 @@ if (isset($_SESSION['arrayError'])) {
         width: 40em;
         margin-left: 10%;
         padding: 10px;
+        background-color: #3792E5;
+        /* background-image: url(images/images.png); */
     }
     .TAILLE2{
         border: 2px solid #3792E5;
@@ -99,8 +102,8 @@ if (isset($_SESSION['arrayError'])) {
     }
     .butonQuestion{
         margin-left: 42%;
-        background: #3792E5;
-        color: white;
+        background: whitesmoke;
+        color: #3792E5;
         border: none;
     }
     .breukhnieule{

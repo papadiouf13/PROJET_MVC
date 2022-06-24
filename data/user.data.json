@@ -1,1 +1,284 @@
-[{"nom":"papa","prenom":"diouf","email":"papa@gmail.com","password":"123","id":"628fad59bf51e","role":"ROLE_ADMIN","avatar":"WhatsApp Image 2022-05-13 at 14.56.42.jpeg"},{"nom":"coach","prenom":"ndoye","telephone":"12345","email":"coach@gmail.com","password":"coach","id":"628fd4599614d"},{"nom":"comore","prenom":"hamissi","telephone":"123","email":"hamissi","password":"123","id":"62989d758b9ac","role":"ROLE_JOUEUR"},{"nom":"ta","prenom":"test","telephone":"123","email":"test@gmail.com","password":"123","id":"6298f8f5b9bf1","role":null},{"nom":"ta","prenom":"tester","telephone":"123","email":"tester@gmail.com","password":"123","id":"6298f9be95f9e","role":null},{"nom":"kebe","prenom":"Mbene","telephone":"123","email":"mbene@gmail.com","password":"1234","id":"6299c8398d755","role":"ROLE_JOUEUR"},{"nom":"laye","prenom":"libasse","telephone":"123","email":"libasse@gmail.com","password":"gggg","id":"629a1fdbb3c09","role":"ROLE_JOUEUR","avatar":"imaage.jpeg"},{"nom":"diarra","prenom":"laye","telephone":"1234","email":"laye@gmail.com","password":"aaaa","id":"629a20768e919","role":"ROLE_JOUEUR","avatar":"Sans_titre__3_-removebg-preview.png"},{"nom":"BARRO","prenom":"Mouhamadou","telephone":"77212121212","email":"BARRO@gmail.com","password":"12345","id":"629a5598331c1","role":"ROLE_JOUEUR","avatar":"maquette connexion inscription"},{"nom":"Barro","prenom":"Mamadou","email":"barro@gmail.com","password":"1234","id":"629b31ad1f531","role":"ROLE_ADMIN","avatar":"images.jpeg"},{"question":null,"typeQuestion":null,"Reponse":null,"numero":null,"id":"629b7681dae35"},{"question":null,"typeQuestion":null,"Reponse":null,"numero":null,"id":"629b77e911bfd"},{"controller":"AdminController","action":"CREER","question":"jbjbkb","numero":"2","typeQuestion":"","Reponse":"gygugug"},{"nom":"Diene","prenom":"Aliou","telephone":"1234","email":"aliou@gmail.com","password":"123","id":"629f1629a3ce7","role":"ROLE_JOUEUR","avatar":""},{"nom":"joue","prenom":"joueur","telephone":"1234","email":"joueur@gmail.com","password":"123","id":"62a0669b106ab","role":"ROLE_JOUEUR","avatar":"WhatsApp Image 2022-05-13 at 14.56.41.jpeg"},{"nom":"admin","prenom":"Admin","email":"admin@gmail.com","password":"admin","id":"62a06723ca9c4","role":"ROLE_ADMIN","avatar":"Avatar-le-dernier-maitre-de-lair.jpg"},{"nom":"joueur","prenom":"joueur","telephone":"123","email":"joueur@gmail.com","password":"joueur","id":"62a2f41447772","role":"ROLE_JOUEUR","avatar":"imaage.jpeg"},{"nom":"QSDqfsgdhj","prenom":"WSxDQFSGDHF","telephone":"123","email":"admin@gmail.com","password":"admin","id":"62a6eb07de7bd","role":"ROLE_JOUEUR","avatar":""},{"nom":"123456","prenom":"QSXDCwfvgbhnfjgkhl","telephone":"00000","email":"barro@gmail.com","password":"1234","id":"62a6ec1243093","role":"ROLE_JOUEUR","avatar":""},{"nom":"ndoye","prenom":"coach","email":"coach@gmail.com","password":"coach","id":"62a716a080d95","role":"ROLE_ADMIN","avatar":"Capture d\u2019\u00e9cran du 2022-06-13 10-03-55.png"},{"nom":"Diongue","prenom":"Mansour","email":"diongue@gmail.com","password":"1234","id":"62a8a268c344f","role":"ROLE_ADMIN","avatar":"shadow-designify (1).png"},{"nom":"diop","prenom":"fatou","telephone":"123","email":"fa@gmail.com","password":"1234","id":"62a8a2a349b32","role":"ROLE_JOUEUR","avatar":""},{"nom":"Diop","prenom":"Pispa","email":"pispa@gmail.com","password":"123","id":"62a8a31fec73f","role":"ROLE_ADMIN","avatar":"WhatsApp_Image_2022-05-13_at_14.53.46-removebg-preview (1).png"},{"nom":"cxvgbwdfxs","prenom":"Wxcvbnbvbvbdwvw","telephone":null,"email":"admin@gmail.com","password":"123","id":"62a8cde23db7a","avatar":""},{"nom":"aaaaaaaaa","prenom":"ppaaaaaaapp","telephone":null,"email":"po@gmail.com","password":"123","id":"62a8ce0dc88ad","avatar":""},{"nom":"Baaa","prenom":"AAAAAAAAAAA","telephone":null,"email":"b@gmail.com","password":"123","id":"62a8ce3e72ad9","avatar":""},{"nom":"Diop","prenom":"Cheikh Anta","email":"cheikh@gmail.com","password":"123","id":"62a9931c28975","role":"ROLE_ADMIN","avatar":"Avatar-le-dernier-maitre-de-lair.jpg"},{"nom":"Diouf","prenom":"Papa","email":"papa@gmail.com","password":"123","id":"62aa17cd59419","role":"ROLE_ADMIN","avatar":"WhatsApp_Image_2022-05-13_at_14.53.44-removebg-preview.png"},{"nom":"Diouf","prenom":"papa Abdou","email":"papa@gmail.com","password":"123","id":"62aa19a389417","role":"ROLE_ADMIN","avatar":"WhatsApp_Image_2022-05-13_at_14.53.44-removebg-preview.png"},{"nom":"diouf","prenom":"papis","email":"papad@gmail.com","password":"123","id":"62aa1d7a39ea3","role":"ROLE_ADMIN","avatar":"shadow-designify (1).png"},{"nom":"Diouf","prenom":"papppa","email":"papa@gmail.com","password":"123","id":"62aa1edcbe709","role":"ROLE_ADMIN","avatar":"WhatsApp_Image_2022-05-13_at_14.53.47-removebg-preview.png"},{"nom":"Barro","prenom":"Mouhamadou","email":"barr@gmail.com","password":"123","id":"62aa3023a0e2a","role":"ROLE_ADMIN","avatar":"shadow-designify (1).png"},{"nom":"nieule","prenom":"breukh","email":"breukh@gmail.com","password":"123","id":"62aadb4eba21b","role":"ROLE_ADMIN","avatar":""},{"nom":"Niang","prenom":"Mansour Balkhami","email":"mansour@gmail.com","password":"123","id":"62ab6e72b6ef1","role":"ROLE_ADMIN","avatar":"imaage.jpeg"},{"nom":"DIOUF","prenom":"PAPA","telephone":"200pts","email":"PA@gmail.com","password":"123","id":"62ab7fb2c5eb0","role":"ROLE_JOUEUR","avatar":""},{"nom":"Mbengue","prenom":"Cheikh Ibra","email":"ibra@gmail.com","password":"123","id":"62ac3af09c64d","role":"ROLE_ADMIN","avatar":"images.jpeg"},{"nom":"Diouf","prenom":"Mamadou","telephone":"200","email":"diouf@gmail.com","password":"123","id":"62af32cb7ba6b","role":"ROLE_JOUEUR","avatar":"WhatsApp_Image_2022-05-13_at_14.53.44-removebg-preview.png"},{"nom":"Gaye","prenom":"Mamour","telephone":"200pts","email":"mamour@gmail.com","password":"123","id":"62b098d59ae05","role":"ROLE_JOUEUR","avatar":"avat.jpg"},{"nom":"Diouf","prenom":"Aida","email":"aida@gmail.com","password":"123","id":"62b3829323120","role":"ROLE_ADMIN","avatar":"WhatsApp Image 2022-05-13 at 14.56.42.jpeg"}]
+[
+    {
+        "nom": "papa",
+        "prenom": "diouf",
+        "email": "papa@gmail.com",
+        "password": "123",
+        "id": "628fad59bf51e",
+        "role": "ROLE_ADMIN",
+        "avatar": "WhatsApp Image 2022-05-13 at 14.56.42.jpeg"
+    },
+    {
+        "nom": "comore",
+        "prenom": "hamissi",
+        "telephone": "123",
+        "email": "hamissi",
+        "password": "123",
+        "id": "62989d758b9ac",
+        "role": "ROLE_JOUEUR"
+    },
+    {
+        "nom": "kebe",
+        "prenom": "Mbene",
+        "telephone": "123",
+        "email": "mbene@gmail.com",
+        "password": "1234",
+        "id": "6299c8398d755",
+        "role": "ROLE_JOUEUR"
+    },
+    {
+        "nom": "laye",
+        "prenom": "libasse",
+        "telephone": "123",
+        "email": "libasse@gmail.com",
+        "password": "gggg",
+        "id": "629a1fdbb3c09",
+        "role": "ROLE_JOUEUR",
+        "avatar": "imaage.jpeg"
+    },
+    {
+        "nom": "diarra",
+        "prenom": "laye",
+        "telephone": "1234",
+        "email": "laye@gmail.com",
+        "password": "aaaa",
+        "id": "629a20768e919",
+        "role": "ROLE_JOUEUR",
+        "avatar": "Sans_titre__3_-removebg-preview.png"
+    },
+    {
+        "nom": "BARRO",
+        "prenom": "Mouhamadou",
+        "telephone": "77212121212",
+        "email": "BARRO@gmail.com",
+        "password": "12345",
+        "id": "629a5598331c1",
+        "role": "ROLE_JOUEUR",
+        "avatar": "maquette connexion inscription"
+    },
+    {
+        "nom": "Barro",
+        "prenom": "Mamadou",
+        "email": "barro@gmail.com",
+        "password": "1234",
+        "id": "629b31ad1f531",
+        "role": "ROLE_ADMIN",
+        "avatar": "images.jpeg"
+    },
+    {
+        "nom": "Diene",
+        "prenom": "Aliou",
+        "telephone": "1234",
+        "email": "aliou@gmail.com",
+        "password": "123",
+        "id": "629f1629a3ce7",
+        "role": "ROLE_JOUEUR",
+        "avatar": ""
+    },
+    {
+        "nom": "joue",
+        "prenom": "joueur",
+        "telephone": "1234",
+        "email": "joueur@gmail.com",
+        "password": "123",
+        "id": "62a0669b106ab",
+        "role": "ROLE_JOUEUR",
+        "avatar": "WhatsApp Image 2022-05-13 at 14.56.41.jpeg"
+    },
+    {
+        "nom": "admin",
+        "prenom": "Admin",
+        "email": "admin@gmail.com",
+        "password": "admin",
+        "id": "62a06723ca9c4",
+        "role": "ROLE_ADMIN",
+        "avatar": "Avatar-le-dernier-maitre-de-lair.jpg"
+    },
+    {
+        "nom": "joueur",
+        "prenom": "joueur",
+        "telephone": "123",
+        "email": "joueur@gmail.com",
+        "password": "joueur",
+        "id": "62a2f41447772",
+        "role": "ROLE_JOUEUR",
+        "avatar": "imaage.jpeg"
+    },
+    {
+        "nom": "QSDqfsgdhj",
+        "prenom": "WSxDQFSGDHF",
+        "telephone": "123",
+        "email": "admin@gmail.com",
+        "password": "admin",
+        "id": "62a6eb07de7bd",
+        "role": "ROLE_JOUEUR",
+        "avatar": ""
+    },
+    {
+        "nom": "123456",
+        "prenom": "QSXDCwfvgbhnfjgkhl",
+        "telephone": "00000",
+        "email": "barro@gmail.com",
+        "password": "1234",
+        "id": "62a6ec1243093",
+        "role": "ROLE_JOUEUR",
+        "avatar": ""
+    },
+    {
+        "nom": "ndoye",
+        "prenom": "coach",
+        "email": "coach@gmail.com",
+        "password": "coach",
+        "id": "62a716a080d95",
+        "role": "ROLE_ADMIN",
+        "avatar": "Capture d\u2019\u00e9cran du 2022-06-13 10-03-55.png"
+    },
+    {
+        "nom": "Diongue",
+        "prenom": "Mansour",
+        "email": "diongue@gmail.com",
+        "password": "1234",
+        "id": "62a8a268c344f",
+        "role": "ROLE_ADMIN",
+        "avatar": "shadow-designify (1).png"
+    },
+    {
+        "nom": "diop",
+        "prenom": "fatou",
+        "telephone": "123",
+        "email": "fa@gmail.com",
+        "password": "1234",
+        "id": "62a8a2a349b32",
+        "role": "ROLE_JOUEUR",
+        "avatar": ""
+    },
+    {
+        "nom": "Diop",
+        "prenom": "Pispa",
+        "email": "pispa@gmail.com",
+        "password": "123",
+        "id": "62a8a31fec73f",
+        "role": "ROLE_ADMIN",
+        "avatar": "WhatsApp_Image_2022-05-13_at_14.53.46-removebg-preview (1).png"
+    },
+    {
+        "nom": "Diop",
+        "prenom": "Cheikh Anta",
+        "email": "cheikh@gmail.com",
+        "password": "123",
+        "id": "62a9931c28975",
+        "role": "ROLE_ADMIN",
+        "avatar": "Avatar-le-dernier-maitre-de-lair.jpg"
+    },
+    {
+        "nom": "Diouf",
+        "prenom": "Papa",
+        "email": "papa@gmail.com",
+        "password": "123",
+        "id": "62aa17cd59419",
+        "role": "ROLE_ADMIN",
+        "avatar": "WhatsApp_Image_2022-05-13_at_14.53.44-removebg-preview.png"
+    },
+    {
+        "nom": "Diouf",
+        "prenom": "papa Abdou",
+        "email": "papa@gmail.com",
+        "password": "123",
+        "id": "62aa19a389417",
+        "role": "ROLE_ADMIN",
+        "avatar": "WhatsApp_Image_2022-05-13_at_14.53.44-removebg-preview.png"
+    },
+    {
+        "nom": "diouf",
+        "prenom": "papis",
+        "email": "papad@gmail.com",
+        "password": "123",
+        "id": "62aa1d7a39ea3",
+        "role": "ROLE_ADMIN",
+        "avatar": "shadow-designify (1).png"
+    },
+    {
+        "nom": "Diouf",
+        "prenom": "papppa",
+        "email": "papa@gmail.com",
+        "password": "123",
+        "id": "62aa1edcbe709",
+        "role": "ROLE_ADMIN",
+        "avatar": "WhatsApp_Image_2022-05-13_at_14.53.47-removebg-preview.png"
+    },
+    {
+        "nom": "Barro",
+        "prenom": "Mouhamadou",
+        "email": "barr@gmail.com",
+        "password": "123",
+        "id": "62aa3023a0e2a",
+        "role": "ROLE_ADMIN",
+        "avatar": "shadow-designify (1).png"
+    },
+    {
+        "nom": "nieule",
+        "prenom": "breukh",
+        "email": "breukh@gmail.com",
+        "password": "123",
+        "id": "62aadb4eba21b",
+        "role": "ROLE_ADMIN",
+        "avatar": ""
+    },
+    {
+        "nom": "Niang",
+        "prenom": "Mansour Balkhami",
+        "email": "mansour@gmail.com",
+        "password": "123",
+        "id": "62ab6e72b6ef1",
+        "role": "ROLE_ADMIN",
+        "avatar": "imaage.jpeg"
+    },
+    {
+        "nom": "DIOUF",
+        "prenom": "PAPA",
+        "telephone": "200pts",
+        "email": "PA@gmail.com",
+        "password": "123",
+        "id": "62ab7fb2c5eb0",
+        "role": "ROLE_JOUEUR",
+        "avatar": ""
+    },
+    {
+        "nom": "Mbengue",
+        "prenom": "Cheikh Ibra",
+        "email": "ibra@gmail.com",
+        "password": "123",
+        "id": "62ac3af09c64d",
+        "role": "ROLE_ADMIN",
+        "avatar": "images.jpeg"
+    },
+    {
+        "nom": "Diouf",
+        "prenom": "Mamadou",
+        "telephone": "200",
+        "email": "diouf@gmail.com",
+        "password": "123",
+        "id": "62af32cb7ba6b",
+        "role": "ROLE_JOUEUR",
+        "avatar": "WhatsApp_Image_2022-05-13_at_14.53.44-removebg-preview.png"
+    },
+    {
+        "nom": "Gaye",
+        "prenom": "Mamour",
+        "telephone": "200pts",
+        "email": "mamour@gmail.com",
+        "password": "123",
+        "id": "62b098d59ae05",
+        "role": "ROLE_JOUEUR",
+        "avatar": "avat.jpg"
+    },
+    {
+        "nom": "Diouf",
+        "prenom": "Aida",
+        "email": "aida@gmail.com",
+        "password": "123",
+        "id": "62b3829323120",
+        "role": "ROLE_ADMIN",
+        "avatar": "WhatsApp Image 2022-05-13 at 14.56.42.jpeg"
+    }
+]
