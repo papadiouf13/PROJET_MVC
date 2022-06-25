@@ -35,22 +35,25 @@ if (isset($_SESSION['arrayError'])) {
         </span> 
         <label id="error"></label>
         <div id="rep">
-        <?php foreach ($Question['Reponse'] as $key => $value) :?>
-        <?php if($Question["typeQuestion"] == "unique"): ?>
-           <input type="text" name="reponse[]" value="<?= $value ?>" >
-           <input type="radio" name="bonneReponse[]" value="<?= $value ?>">
-           <i class="fa fa-trash" id="delete"></i>
-       <?php endif?>
-       <?php if($Question["typeQuestion"] == "simple"): ?>
-           <input type="text" name="bonneReponse[]" value="<?= $value ?>" >
-           <i class="fa fa-trash" id="delete"></i>
-       <?php endif?>
-       <?php if($Question["typeQuestion"] == "multiple"): ?>
-           <input type="text" name="reponse[]" value="<?= $value ?>" >
-           <input type="checkbox" name="bonneReponse[]" value="<?= $value ?>">
-           <i class="fa fa-trash" id="delete"></i><br>
-       <?php endif?>
-      <?php endforeach?>     
+        <?php if(isset($Question)): ?>
+            
+            <?php foreach ($Question['Reponse'] as $key => $value) :?>
+            <?php if($Question["typeQuestion"] == "unique"): ?>
+            <input type="text" name="reponse[]" value="<?= $value ?>" >
+            <input type="radio" name="bonneReponse[]" value="<?= $value ?>">
+            <i class="fa fa-trash" id="delete"></i>
+        <?php endif?>
+        <?php if($Question["typeQuestion"] == "simple"): ?>
+            <input type="text" name="bonneReponse[]" value="<?= $value ?>" >
+            <i class="fa fa-trash" id="delete"></i>
+        <?php endif?>
+        <?php if($Question["typeQuestion"] == "multiple"): ?>
+            <input type="text" name="reponse[]" value="<?= $value ?>" >
+            <input type="checkbox" name="bonneReponse[]" value="<?= $value ?>">
+            <i class="fa fa-trash" id="delete"></i><br>
+        <?php endif?>
+        <?php endforeach?>     
+      <?php endif?>
         </div>
         <button type="submit" class="butonQuestion">Enregistrer</button>
     </div>
@@ -173,7 +176,7 @@ if (isset($_SESSION['arrayError'])) {
             <label for="">Réponse ${nbr}</label>
             <input type="text" name="reponse[]" class="TAILLE2">
             <input type="radio" name="bonneReponse[]" value="${nbr}">
-            <i class="fa fa-trash" id="delete"></i>
+            
        `
        }else if (typeQuestion.value == "multiple") {
 
@@ -183,7 +186,7 @@ if (isset($_SESSION['arrayError'])) {
             <label for="">Réponse ${nbr}</label>
             <input type="text" name="reponse[]" class="TAILLE2">
             <input type="checkbox" name="bonneReponse[]" value="${nbr}">
-            <i class="fa fa-trash"></i>
+            
        `
        }else if (typeQuestion.value == "") {
         nbr = 0
@@ -196,6 +199,8 @@ if (isset($_SESSION['arrayError'])) {
 
       
     })
+
+    
    
     
 </script>

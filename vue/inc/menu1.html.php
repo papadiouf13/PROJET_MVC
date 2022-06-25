@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/StyleJoueur.css">
 </head>
 <body>
-    <div class="fixe">
+    <div class="fixer">
         <h1>LE PLAISIR DE JOUER</h1>
         <div class="deconn"><button class="BUTON"><a href="<?php echo WEB_ROUTE.'?controller=securityController&view=deconnexion'?>">Deconnexion</a></button></div>
     </div>
@@ -38,4 +38,14 @@
         height: 80px;
         border-radius: 50%;
     }
+    .fixer h1{
+    margin-left: 35%;
+    color: white;
+    margin-top: 5px;
+}
+.fixer{
+    width: 100%;
+    height: 45px;
+    background:#3792E5;
+}
 </style>

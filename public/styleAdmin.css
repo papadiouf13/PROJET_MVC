@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.fixe{
+    width: 100%;
+    height: 45px;
+    background:#3792E5;
+}
+.fixe h1{
+    margin-left: 35%;
+    color: white;
+    margin-top: 5px;
+}
+
+.deconn{
+    margin-left: 90%;
+    margin-top: -4.7%;
+}
+.grandCadre{
+    /* border: 2px solid; */
+    width: 97%;
+    height: 436px;
+    display: flex;
+    margin-top: 2%;
+
+}
+.profil{
+    /* border: 2px solid; */
+    width: 30%;
+    height: 490px;
+    background: rgb(225, 225, 225);
+}
+.entete{
+    /* border: 2px solid; */
+    width: 99.7%;
+    height: 150px;
+    background: #3792E5;
+    display: flex;
+    align-items: center;
+}
+.photoAdmin{
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+}
+.ajoutAdmin{
+    border: 2px solid #3792E5;
+    /* height: 433px; */
+    width: 65%;
+    margin-left: 2%;
+    display: flex;
+    box-shadow: 5px 5px 3px #3792E5;
+    
+}
+.formAjoutAdmin{
+    /* border: 2px solid ; */
+   /*  height: 433px; */
+    width: 100%;
+    margin-left: 18%;
+}
+.titreFormAdmin{
+    width: 99%;
+    height: 8%;
+}
+.formInscritAdmin{
+    /* border: 2px solid palevioletred; */
+    margin-top: 2%;
+    width: 80%;
+    margin-left: 5%;
+}
+.infoAdmin{
+    width: 50%;
+    margin-left:5%;
+    font-family: "Courier New", Courier, monospace;
+}
+.Nomprenom{
+    font-family: "Courier New", Courier, monospace;
+    margin-left:5%;
+    color: aliceblue;
+}
+.InpIns{
+    margin-top: 2%;
+    width: 80%;
+    height: 20px;
+    border: 1px solid #3792E5;
+    border-radius: 10px;
+}
+.labinput{
+    margin-top: 1%;
+}
+.buttton{
+    width: 35%;
+    margin-left: 28%;
+    margin-top: 25px;
+    border-radius: 20px;
+    color: white;
+    background-color: #3792E5;
+    height: 2em;
+}
+.hh2{
+    color: #3792E5;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+.AVATARInserer{
+    border: 2px solid;
+    width: 200px;
+    height: 200px;
+    margin-top: 10%;
+    border-radius: 50%;
+}
+.modificationAdmin{
+    width: 97%;
+    border: 2px green;
+    height: 30px;
+}
+.lienModAmin{
+    margin-left: 5%;
+    font-size: 20px;
+    text-decoration: none;
+}
+.photodelecrivain{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-left: 28%;
+    margin-top: 2%;
+
+}
+.citations{
+    color: #3792E5;
+}
+.EntourageAdmin{
+    border: 2px solid #3792E5;
+    /* height: 433px; */
+    width: 65%;
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 5px 5px 3px #3792E5;
+    
+}
+
+.POETE{
+    color: goldenrod;
+}
+.POETE h2{
+    color: #3792E5;
+}
